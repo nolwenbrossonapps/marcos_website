@@ -1,0 +1,1228 @@
+/*
+Theme Name:     Rafa Nadal
+Description:    Child theme for Verve
+Version:        1.0
+Author:         Arnau
+Author URI:     http://www.erigin.com/
+Template:       verve
+*/
+
+
+
+img {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  
+	transition:all 0.5s ease-in-out;
+	-moz-transition:all 0.5s ease-in-out; /* Firefox 4 */
+	-webkit-transition: all 0.5s ease-in-out; /* Safari and Chrome */
+	-o-transition:all 0.5s ease-in-out; /* Opera */
+}
+img:hover {
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+.home img {
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
+/*Motion*/
+a,
+a img,
+a span,
+:before,
+:after,
+.navbar-toggle,
+.navbar-toggle span,
+.btn,
+.img-fan *{
+	transition:all 0.2s ease-in-out;
+	-moz-transition:all 0.2s ease-in-out; /* Firefox 4 */
+	-webkit-transition: all 0.2s ease-in-out; /* Safari and Chrome */
+	-o-transition:all 0.2s ease-in-out; /* Opera */
+	outline:0!important;
+}
+.img-fan *{
+	transition:all 0.4s ease-in-out;
+	-moz-transition:all 0.4s ease-in-out; /* Firefox 4 */
+	-webkit-transition: all 0.4s ease-in-out; /* Safari and Chrome */
+	-o-transition:all 0.4s ease-in-out; /* Opera */
+}
+
+/* FonFace */
+
+@font-face {
+  font-family: 'Futura';
+  src: url('fonts/FuturaStd-Book.eot');
+  src: url('fonts/FuturaStd-Book.eot#iefix') format('embedded-opentype'),
+       url('fonts/FuturaStd-Book.woff') format('woff'),
+       url('fonts/FuturaStd-Book.ttf') format('truetype'),
+       url('fonts/FuturaStd-Book.svg#FuturaStd-Book') format('svg');
+  font-weight: 100;
+  font-style: normal;
+}
+  @font-face {
+    font-family: 'Futura';
+    src: url('fonts/FuturaStd-BookOblique.eot');
+    src: url('fonts/FuturaStd-BookOblique.eot#iefix') format('embedded-opentype'),
+         url('fonts/FuturaStd-BookOblique.woff') format('woff'),
+         url('fonts/FuturaStd-BookOblique.ttf') format('truetype'),
+         url('fonts/FuturaStd-BookOblique.svg#FuturaStd-BookOblique') format('svg');
+    font-weight: 100;
+    font-style: italic;
+  }
+
+@font-face {
+  font-family: 'Futura';
+  src: url('fonts/FuturaStd-Medium.eot');
+  src: url('fonts/FuturaStd-Medium.eot#iefix') format('embedded-opentype'),
+       url('fonts/FuturaStd-Medium.woff') format('woff'),
+       url('fonts/FuturaStd-Medium.ttf') format('truetype'),
+       url('fonts/FuturaStd-Medium.svg#FuturaStd-Medium') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+  @font-face {
+    font-family: 'Futura';
+    src: url('fonts/FuturaStd-MediumOblique.eot');
+    src: url('fonts/FuturaStd-MediumOblique.eot#iefix') format('embedded-opentype'),
+         url('fonts/FuturaStd-MediumOblique.woff') format('woff'),
+         url('fonts/FuturaStd-MediumOblique.ttf') format('truetype'),
+         url('fonts/FuturaStd-MediumOblique.svg#FuturaStd-MediumOblique') format('svg');
+    font-weight: 300;
+    font-style: italic;
+  }
+
+@font-face {
+  font-family: 'Futura';
+  src: url('fonts/FuturaStd-Heavy.eot');
+  src: url('fonts/FuturaStd-Heavy.eot#iefix') format('embedded-opentype'),
+       url('fonts/FuturaStd-Heavy.woff') format('woff'),
+       url('fonts/FuturaStd-Heavy.ttf') format('truetype'),
+       url('fonts/FuturaStd-Heavy.svg#FuturaStd-Heavy') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+  @font-face {
+    font-family: 'Futura';
+    src: url('fonts/FuturaStd-HeavyOblique.eot');
+    src: url('fonts/FuturaStd-HeavyOblique.eot#iefix') format('embedded-opentype'),
+         url('fonts/FuturaStd-HeavyOblique.woff') format('woff'),
+         url('fonts/FuturaStd-HeavyOblique.ttf') format('truetype'),
+         url('fonts/FuturaStd-HeavyOblique.svg#FuturaStd-HeavyOblique') format('svg');
+    font-weight: bold;
+    font-style: italic;
+  }
+
+#verve_ajax_container .ajax-loader-gif-container {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  background: #111;
+}
+
+
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Futura' !important;
+}
+/*.hide-sidebar {
+  display: none;
+}*/
+
+/* Header Section */
+#vrv_lower {
+  bottom: 50px !important;
+}
+#prk_sidebar_trigger,
+#show_sponsor{
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: 'Cabin', sans-serif;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+#prk_sidebar_trigger {
+  width: 50px;
+  background: url(../../uploads/2017/04/bg-redes.png) no-repeat center center;
+  background-size: 100% auto;
+  margin: auto;
+  margin-bottom: 10px;
+  text-indent: -99999px;
+  overflow: hidden;
+}
+#prk_sidebar_trigger:hover {
+  background: url(../../uploads/2017/04/bg-redes-h.png) no-repeat center center;
+  background-size: 100% auto;
+}
+.wpml-ls-legacy-list-horizontal a {
+  font-family: 'Cabin', sans-serif;
+  font-size: 18px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 5px 8px;
+  color: #fff;
+}
+.wpml-ls-legacy-list-horizontal a:hover {
+  color: #0ab6d1;
+}
+.wpml-ls-item.wpml-ls-current-language a {
+  opacity: 1;
+  color: #0ab6d1;
+  pointer-events: none;
+}
+.menu_at_top #prk_blocks_wrapper {
+  /*position: fixed; 
+  right: 5px;
+  top: 34px;*/
+}
+/* Home panles */
+#vrv_panels_bk img {
+  backface-visibility: hidden;
+  left: 50%;
+  max-width: none;
+  min-height: 100%;
+  min-width: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  transition-duration: 0.3s;
+  transition-property: opacity;
+  width: auto;
+}
+
+.vrv_panel_read {
+  display: none;
+}
+
+/* sponsors */
+.sidebar-sponsors {
+	margin-left:-276px;
+	z-index: 99999;
+}
+.verve_showing_sidebar #prk_hidden_bar_sponsors {
+    margin-left: 122px;
+}
+#prk_hidden_bar_sponsors.vrv_anim {
+    opacity: 1;
+}
+.verve_showing_sidebar #prk_hidden_bar_sponosrs {
+    visibility: visible;
+}
+.admin-bar #prk_hidden_bar_sponsors {
+    top: 32px;
+}
+#prk_hidden_bar_sponosrs, #prk_hidden_bar_sponsors .body_colored {
+    color: #bbbbbb;
+}
+#prk_hidden_bar_sponosrs {
+    background-color: #171717;
+    font-size: 14px;
+    width: 400px;
+}
+#prk_hidden_bar_sponosrs {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    z-index:9999999;
+    }
+
+
+
+/* About */
+.page-id-197 .social_links_shortcode,
+.page-id-390 .social_links_shortcode {
+	float: right;
+}
+.verve_inner_social {
+  color:#000;
+  opacity: 1;
+}
+.verve_inner_social:hover {
+  color: #0ab6d1;
+  opacity: .7;
+}
+
+/* Quotes */
+
+.quote-row {
+  display:table;
+  vertical-align: middle;
+  width: 100%;
+}
+.quote-row .left-column {
+  background: #222222; /* Old browsers */
+  background: -moz-linear-gradient(top, #222222 0%, #363636 50%, #222222 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #222222 0%,#363636 50%,#222222 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #222222 0%,#363636 50%,#222222 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222222', endColorstr='#222222',GradientType=0 ); /* IE6-9 */
+  color:#fff;
+}
+.quote-row .right-column {
+  background: #aeadae; /* Old browsers */
+  background: -moz-linear-gradient(top, #aeadae 0%, #c6c6c7 50%, #aeadae 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #aeadae 0%,#c6c6c7 50%,#aeadae 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #aeadae 0%,#c6c6c7 50%,#aeadae 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aeadae', endColorstr='#aeadae',GradientType=0 ); /* IE6-9 */
+  color:#fff;
+}
+.quote-row:nth-child(even) .left-column {
+  background: #aeadae; /* Old browsers */
+  background: -moz-linear-gradient(top, #aeadae 0%, #c6c6c7 50%, #aeadae 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #aeadae 0%,#c6c6c7 50%,#aeadae 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #aeadae 0%,#c6c6c7 50%,#aeadae 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aeadae', endColorstr='#aeadae',GradientType=0 ); /* IE6-9 */
+}
+.quote-row:nth-child(even) .right-column {
+  background: #222222; /* Old browsers */
+  background: -moz-linear-gradient(top, #222222 0%, #363636 50%, #222222 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #222222 0%,#363636 50%,#222222 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #222222 0%,#363636 50%,#222222 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222222', endColorstr='#222222',GradientType=0 ); /* IE6-9 */
+}
+.single-quote {
+  width: 100%;
+  display: block;
+  padding: 6%;
+  font-size: 34px;
+  line-height: 34px;
+  vertical-align: middle;
+}
+.single-quote span {
+  width: 10%;
+  max-width: 50px;
+  height: 4px;
+  display: block;
+  position: relative;
+  top: 16px;
+}
+
+/* Fans */
+
+.fan_copy {
+  text-align: center;
+  padding: 10px 35px;
+}
+
+.fan-row {
+  
+}
+.img-fan {
+  position: relative;
+  float:left;
+  width: 100%;
+  cursor: pointer;
+}
+  .img-fan img {
+    float: left;
+    width: 100%;
+  }
+  .img-fan .copy-fan {
+    pointer-events: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 40px;
+    font-size: 16px;
+    color: #fff;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 8%, rgba(0,0,0,0.6) 85%);
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 8%,rgba(0,0,0,0.6) 85%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 8%,rgba(0,0,0,0.6) 85%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#99000000',GradientType=0 );
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+  }
+  .img-fan:hover .copy-fan {
+    padding: 50px 40px;
+  }
+
+
+/*SPONSORS*/
+
+#show_sponsor {
+  cursor:pointer;
+}
+.show_sponsor,
+#show_sponsor:hover {
+  color: #0ab6d1;
+}
+.lateral_sponsor {
+  width: 400px;
+  background-color: #171717;
+  font-size: 14px;
+  position: fixed;
+  margin-left: -278px;
+  top: 0px;
+  bottom: 0px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 1;
+  z-index: 9990;
+  -moz-transition-property: margin,opacity;
+  -o-transition-property: margin,opacity;
+  -webkit-transition-property: margin,opacity;
+  transition-property: margin,opacity;
+  -moz-transition: cubic-bezier(0.645, 0.045, 0.355, 1) .7s;
+  -o-transition: cubic-bezier(0.645, 0.045, 0.355, 1) .7s;
+  -webkit-transition: cubic-bezier(0.645, 0.045, 0.355, 1) .7s;
+  transition: cubic-bezier(0.645, 0.045, 0.355, 1) .7s;
+  display: none;
+  overflow: auto;
+}
+.lateral_sponsor .widget-title {
+  color: #fff;
+}
+.widget-title {
+  padding-bottom: 10px;
+}
+.lateral_sponsor .widget-title:after {
+  background-color: #252525;
+}
+.lateral_sponsor_bar_scroller {
+  padding: 60px 0px 10px;
+}
+.lateral_sponsor_bar_inner {
+  padding: 0px 40px;
+  line-height: 1.6em;
+  color: transparent;
+}
+
+.verve_showing_sponsors .lateral_sponsor {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=1);
+  opacity: 1;
+  margin-left: 122px;
+  visibility: visible;
+}
+
+.verve_showing_sponsors #verve_ajax_container {
+  margin-left: 400px;
+}
+
+.verve_showing_sponsors #body_hider {
+  -moz-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  z-index: 991;
+}
+
+
+
+.sponsor {
+	background-image: url(http://rafaelnadal.com/wp-content/uploads/2017/03/logo-corona-white.png);
+	background-repeat:no-repeat;
+  background-position:top;
+  background-color: transparent;
+  height: 40px;
+  width: 40px;
+  border:none;
+  background-size: cover;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition:all 0.2s ease-in-out;
+	-moz-transition:all 0.2s ease-in-out; /* Firefox 4 */
+	-webkit-transition: all 0.2s ease-in-out; /* Safari and Chrome */
+	-o-transition:all 0.2s ease-in-out; /* Opera */
+}
+#show_sponsor:hover .sponsor,
+#show_sponsor.show_sponsor .sponsor{
+	background-image: url(http://rafaelnadal.com/wp-content/uploads/2017/04/logo-corona-blue.png);
+}
+  .sponsors img {
+    width: 32px;
+  }
+
+.post-sponsor {
+  width: 49%;
+  padding: 10px;
+  display: inline-table;
+  height: 100px;
+  vertical-align: middle;
+}
+.post-sponsor:last-child {
+  width: 100%;
+}
+.post-sponsor a {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* DayToDay */
+
+
+.daytodat_menu {
+  position: fixed;
+  top: 0px;
+  left: 122px;
+  right: 0;
+  padding: 30px;
+  text-align: center;
+  background-color: #f9f9f9;
+  opacity: 1;
+  z-index: 9990;
+  -moz-transition-property: margin,opacity;
+  -o-transition-property: margin,opacity;
+  -webkit-transition-property: margin,opacity;
+  transition-property: margin,opacity;
+  -moz-transition: cubic-bezier(0.645, 0.045, 0.355, 1) .7s;
+  -o-transition: cubic-bezier(0.645, 0.045, 0.355, 1) .7s;
+  -webkit-transition: cubic-bezier(0.645, 0.045, 0.355, 1) .7s;
+  transition: cubic-bezier(0.645, 0.045, 0.355, 1) .7s;
+}
+.daytodat_menu button {
+  display: inline-block;
+  font-family: 'Cabin', sans-serif;
+  font-size: 0.8em;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0px 6px;
+  border:0;
+  color: #a5a5a5;
+  background: transparent;
+}
+.daytodat_menu .is-checked {
+  color: #2f2f2f;
+}
+.daytoday .grid {
+  margin-top: 74px;
+}
+.dayrow {
+  position: relative!important;
+  width: 100%;
+  overflow: hidden;
+  top: 0px!important;
+}
+.day_img {
+  position:relative;
+  overflow: hidden;
+}
+  .day_img img {
+    float: left;
+  }
+  .day_img .copy-day {
+    pointer-events: none;
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 16px;
+    padding: 10px 20px;
+    color:#fff;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+8,000000+85&0+8,0.6+85 */
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 8%, rgba(0,0,0,0.6) 85%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 8%,rgba(0,0,0,0.6) 85%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 8%,rgba(0,0,0,0.6) 85%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#99000000',GradientType=0 ); /* IE6-9 */
+
+    transition:all 0.5s ease-in-out;
+    -moz-transition:all 0.5s ease-in-out; /* Firefox 4 */
+    -webkit-transition: all 0.5s ease-in-out; /* Safari and Chrome */
+    -o-transition:all 0.5s ease-in-out; /* Opera */
+  }
+
+  .day_img:hover .copy-day {
+    padding: 30px 20px;
+  }
+
+.single_day {
+  position: relative;
+  overflow: hidden;
+}
+  .single_day img {
+    
+    float: left;
+  }
+  .single_day:before {
+    pointer-events: none;
+    position: absolute;
+    content:" ";
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom:20px;
+    border: 4px solid #000;
+    background: transparent;
+    z-index: 1;
+  }
+
+.single_day img {
+  pointer-events: none;
+}
+
+
+.single_day .day_middle {
+  position:absolute;
+  top: 180px;
+  left: 20px;
+  right: 20px;
+  padding: 20px;
+  line-height: 20px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+8,000000+85&0+8,0.6+85 */
+  
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#99000000',GradientType=0 ); /* IE6-9 */
+  
+  transition:all 0.5s ease-in-out;
+  -moz-transition:all 0.5s ease-in-out; /* Firefox 4 */
+  -webkit-transition: all 0.5s ease-in-out; /* Safari and Chrome */
+  -o-transition:all 0.5s ease-in-out; /* Opera */
+}
+
+
+.single_day .day_top {
+  position:absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  padding: 20px;
+  line-height: 20px;
+  color:#000;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+8,000000+85&0+8,0.6+85 */
+  
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#99000000',GradientType=0 ); /* IE6-9 */
+  
+  transition:all 0.5s ease-in-out;
+  -moz-transition:all 0.5s ease-in-out; /* Firefox 4 */
+  -webkit-transition: all 0.5s ease-in-out; /* Safari and Chrome */
+  -o-transition:all 0.5s ease-in-out; /* Opera */
+}
+  .single_day .day_top .current_date,
+  .single_day .day_top .day_city {
+    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .single_day .day_top .day_country {
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .single_day .day_top .day_content {
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .single_day .day_top .day_temp p {
+    font-size: 14px;
+    margin: 0;
+  }
+  .single_day .day_bottom .fechas_torneo {
+    font-size: 14px;
+  }
+  
+
+.single_day .day_bottom {
+  position:absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  padding: 20px;
+  line-height: 20px;
+  color:#bababa;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+8,000000+85&0+8,0.6+85 */
+  
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#99000000',GradientType=0 ); /* IE6-9 */
+  
+  transition:all 0.5s ease-in-out;
+  -moz-transition:all 0.5s ease-in-out; /* Firefox 4 */
+  -webkit-transition: all 0.5s ease-in-out; /* Safari and Chrome */
+  -o-transition:all 0.5s ease-in-out; /* Opera */
+}
+
+.single_day h4 {
+  right: 20px;
+  bottom:20px;
+  display: inline-block;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.single_day .day_bottom h4 {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 12px;
+  font-weight: 100;
+  text-transform: uppercase;
+  color:#fff;
+  background-color: #bababa;
+  padding: 0;
+  margin-bottom: 10px;
+}
+.single_day .day_bottom h3 {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  margin-bottom: 4px;
+}
+.single_day .day_bottom .nombre_torneo {
+  display: block;
+  font-size: 14px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+
+/*Daytoday temporal*/
+
+
+.img-txt .vrv_outer_row {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 380px;
+  padding: 40px;
+  background: rgba(0,0,0,.9);
+}
+
+.img-txt .prk_inner_block {
+  width:100%;
+      max-width: none;
+}
+.img-txt .vrv_outer_row .row {
+  position: absolute;
+  top: 50%;
+  width: 90%;
+  transform: translateY(-50%);
+  text-align: left;
+}
+
+
+
+/*COOKIES*/
+
+#catapult-cookie-bar {
+  background-color: rgba(0,0,0,.8)!important;
+}
+
+
+@media (min-width: 768px) {
+  .bg-about-mobile {
+    background-image: none!important;
+  }
+  .single-quote {
+    padding: 6%;
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .single_day,
+  .day_img {
+    float: left;
+    width: 33.33333%;
+  }
+  .img-fan {
+    width: 50%;
+  }
+  .single-quote {
+    display: table-cell;
+    width: 50%;
+    height: 220px;
+  }
+  .fan_copy {
+    padding: 20px 35px;
+  }
+  .img-fan .copy-fan,
+  .day_img .copy-day{
+    font-size: 18px;
+  }
+  .single_day:before {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 4px solid #000;
+  }
+  .single_day .day_middle {
+    top: 180px;
+    left: 10px;
+    right: 10px;
+    padding: 10px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+8,000000+85&0+8,0.6+85 */
+  }
+  .single_day .day_top {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    padding: 10px;
+  }
+  .single_day .day_bottom {
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    padding: 10px;
+  }
+  .day_img .copy-day {
+    padding: 10px 20px;
+  }
+  .day_img:hover .copy-day {
+    padding: 30px 20px;
+  }
+  .daytoday .grid {
+    margin-top: 58px;
+  }
+}
+@media (min-width: 980px) {
+  
+  #verve_header_inner {
+    width: 70px;
+    margin: auto;
+    margin-top: 20px;
+  }
+  .img-fan {
+    width: 33.3333%;
+  }
+  .daytoday .grid {
+    margin-top: 86px;
+  }
+  .single_day:before {
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 6px solid #000;
+  }
+  .single_day .day_top {
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    padding: 20px;
+  }
+  .single_day .day_bottom {
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    padding: 20px;
+  }
+  .single_day .day_top .current_date,
+  .single_day .day_top .day_city {
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 4px;
+    margin-bottom: 4px;
+  }
+  .single_day .day_top .day_country {
+    font-size: 17px;
+    letter-spacing: 8px;
+    margin-bottom: 4px;
+  }
+  .single_day .day_top .day_content {
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+  .single_day .day_bottom h3 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 4px;
+  }
+  .single_day .day_bottom .nombre_torneo {
+    font-size: 14px;
+    letter-spacing: 0;
+    margin-bottom: 4px;
+  }
+  .day_img .copy-day {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  .day_img:hover .copy-day {
+    padding: 30px 20px;
+  }
+  .single_day .day_top .day_temp p {
+    font-size: 14px;
+    margin: 0;
+  }
+}
+@media (min-width: 1200px) {
+  
+  .single-quote {
+    padding: 6%;
+    font-size: 34px;
+    line-height: 40px;
+    height: 320px;
+  }
+  .fan_copy {
+    padding: 35px;
+  }
+  .img-fan .copy-fan,
+  .day_img .copy-day{
+    font-size: 20px;
+  }
+  .single_day .day_middle,
+  .single_day .day_top,
+  .single_day h4,
+  .single_day .day_bottom {
+    margin-top: 10px;
+    padding: 30px;
+  }
+  .single_day .day_top .current_date,
+  .single_day .day_top .day_city {
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 4px;
+    margin-bottom: 6px;
+  }
+  .single_day .day_top .day_country {
+    font-size: 26px;
+    letter-spacing: 10px;
+    margin-bottom: 6px;
+  }
+  .single_day .day_top .day_content {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  .single_day .day_top .day_temp p {
+    font-size: inherit;
+  }
+  .single_day .day_bottom h3 {
+    font-size: 24px;
+    letter-spacing: 8px;
+    margin-bottom: 6px;
+  }
+  .single_day .day_bottom h4 {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .single_day .day_bottom .nombre_torneo {
+    font-size: 16px;
+    letter-spacing: 0px;
+    margin-bottom: 6px;
+  }
+  .day_img .copy-day {
+    font-size: 16px;
+    padding: 10px 30px;
+  }
+  .day_img:hover .copy-day {
+    padding: 40px 30px;
+  }
+  .single_day .day_bottom .fechas_torneo {
+    font-size: inherit;
+  }
+}
+
+@media (min-width: 1600px) {
+  .single_day:before {
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    border: 8px solid #000;
+  }
+  .single_day .day_top {
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    padding: 40px;
+  }
+  .single_day .day_bottom {
+    bottom: 40px;
+    left: 40px;
+    right: 40px;
+    padding: 40px;
+  }
+  .single_day .day_top .current_date,
+  .single_day .day_top .day_city {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+  }
+  .single_day .day_top .day_country {
+    font-size: 29px;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+  }
+  .single_day .day_top .day_content {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .single_day .day_bottom h3 {
+    font-size: 30px;
+    letter-spacing: 8px;
+    margin-bottom: 10px;
+  }
+  .single_day .day_bottom .nombre_torneo {
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+  .day_img .copy-day {
+    font-size: 18px;
+    padding: 20px 40px;
+  }
+  .day_img:hover .copy-day {
+    padding: 50px 40px;
+  }
+}
+
+@media (min-width: 1900px) {
+  .single_day:before {
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    border: 8px solid #000;
+  }
+  .single_day .day_middle {
+    position:absolute;
+    top: 360px;
+    left: 40px;
+    right: 40px;
+    padding: 40px;
+
+  }
+  .single_day .day_top {
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    padding: 40px;
+  }
+  .single_day .day_bottom {
+    bottom: 40px;
+    left: 40px;
+    right: 40px;
+    padding: 40px;
+  }
+  .single_day .day_top .current_date,
+  .single_day .day_top .day_city {
+    font-size: 26px;
+    line-height: 26px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+  }
+  .single_day .day_top .day_country {
+    font-size: 43px;
+    letter-spacing: 16px;
+    margin-bottom: 10px;
+  }
+  .single_day .day_top .day_content {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+  .single_day .day_bottom h3 {
+    font-size: 34px;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+  }
+  .single_day .day_bottom .nombre_torneo {
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+  }
+  .day_img .copy-day {
+    font-size: 16px;
+    padding: 20px 40px;
+  }
+}
+
+@media (max-width: 979px) {
+  
+  #verve_logo_before {
+    display: none;
+  }
+  #verve_logo_after img {
+    width: auto;
+    height: 44px;
+  }
+  .lateral_sponsor,
+  #prk_hidden_bar{
+    width: 300px;
+    margin-left: -300px;
+  }
+  #verve_header_section #vrv_lower {
+    display: block;
+    position: absolute;
+    width: auto;
+    padding: 0;
+    top: 14px;
+    left: 90px;
+    bottom: inherit!important;
+    background-color: transparent;
+  }
+  #prk_sidebar_trigger,
+  #show_sponsor,
+  .idiomes{
+    float: left;
+    margin-left: 20px;
+    margin-top: 8px;
+  }
+  .idiomes{
+    margin-top: 6px;
+  }
+  .daytodat_menu button {
+    line-height: 38px;
+    height: 38px;
+  }
+  .wpml-ls-legacy-list-horizontal {
+    border: 0;
+    padding: 0;
+  }
+  .wpml-ls-legacy-list-horizontal a {
+    padding: 5px 4px;
+  }
+  .verve_showing_sponsors .lateral_sponsor {
+    margin-left: 0;
+  }
+  .lateral_sponsor_bar_scroller,
+  #prk_hidden_bar_scroller {
+    padding: 80px 0px 10px;
+  }
+  .lateral_sponsor_bar_inner {
+    padding: 0px 16px;
+  }
+  .verve_showing_sponsors #verve_ajax_container {
+    margin-left: 300px;
+  }
+  .menu_at_top #prk_hidden_bar {
+    display: block!important;
+    margin-left: -400px;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+  }
+  .verve_showing_sidebar #prk_hidden_bar {
+    margin-left: 0;
+    opacity: 1;
+  }
+  .daytodat_menu {
+    top: 68px;
+    left: 0;
+    height: auto;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-id-197 .verve_row.verve_cover,
+  .page-id-390 .verve_row.verve_cover {
+    background-position: 0 0;
+    background-size: 170% auto;
+    background-repeat: no-repeat;
+    background-image: none!important;
+  }
+  .verve_spacer {
+    height: 20px!important;
+  }
+  
+  #verve_header_section #vrv_lower {
+    left: 65px;
+  }
+  #prk_sidebar_trigger,
+  #show_sponsor,
+  .idiomes{
+    margin-left: 10px;
+  }
+  #prk_sidebar_trigger {
+    width: 40px;
+    display: block!important;
+  }
+  #prk_blocks_wrapper:before {
+    content: ' ';
+  }
+  #prk_sidebar_trigger, #show_sponsor,
+  .wpml-ls-legacy-list-horizontal a {
+    font-size: 12px;
+  }
+  .verve_showing_sidebar #verve_ajax_container {
+    margin-left: 300px;
+  }
+  .idiomes {
+    margin-top: 7px;
+  }
+  .wpml-ls-legacy-list-horizontal a {
+    padding: 5px 2px;
+  }
+  .menu_at_top #prk_hidden_bar {
+    margin-left: -300px;
+  }
+  .menu_at_top #vrv_side_menu {
+    max-width: 15%;
+  }
+  .verve_showing_sidebar #prk_hidden_bar {
+    margin-left: 0;
+    opacity: 1;
+  }
+  .verve_responsive .verve_theme #verve_main_wrapper .prk_inner_block {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .img-txt .vrv_outer_row {
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    right: 20px;
+    transform: translateY(-50%);
+    padding: 20px;
+    background: rgba(0,0,0,.2);
+  }
+  .single-quote {
+    padding: 10%;
+    font-size: 20px;
+    line-height: 22px;
+  }
+  
+  .quote-row .left-column {
+    background: #aeadae; /* Old browsers */
+    background: -moz-linear-gradient(top, #aeadae 0%, #c6c6c7 50%, #aeadae 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #aeadae 0%,#c6c6c7 50%,#aeadae 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #aeadae 0%,#c6c6c7 50%,#aeadae 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aeadae', endColorstr='#aeadae',GradientType=0 ); /* IE6-9 */
+  }
+  .quote-row .right-column {
+    background: #222222; /* Old browsers */
+    background: -moz-linear-gradient(top, #222222 0%, #363636 50%, #222222 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #222222 0%,#363636 50%,#222222 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #222222 0%,#363636 50%,#222222 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222222', endColorstr='#222222',GradientType=0 ); /* IE6-9 */
+  }
+  .fan_copy {
+    padding: 15px;
+  }
+  .rn_nom h2{
+    margin-top: 20px;
+  }
+    .daytodat_menu button {
+      line-height: 20px;
+      height: 20px;
+    }
+}
